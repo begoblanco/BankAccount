@@ -12,7 +12,7 @@ public class Account {
         this.annualInterestRate = annualInterestRate;
         this.numberOfDeposits = 0;
         this.numberOfWithdrawals = 0;
-        this.monthlyServiceCharge = 0.0f;
+        this.monthlyServiceCharge = 0;
     }
 
     public void deposit(float amount) {
@@ -38,7 +38,48 @@ public class Account {
     public void monthlyProcess() {
         this.balance -= this.monthlyServiceCharge;
         this.calculateMonthlyInterest();
-        this.monthlyServiceCharge = 0.0f;
+        this.monthlyServiceCharge = 0;
+    }
+    
+
+    public float getBalance() {
+        return balance;
+    }
+
+    public void setBalance(float balance) {
+        this.balance = balance;
+    }
+
+    public int getNumberOfDeposits() {
+        return numberOfDeposits;
+    }
+
+    public void setNumberOfDeposits(int numberOfDeposits) {
+        this.numberOfDeposits = numberOfDeposits;
+    }
+
+    public int getNumberOfWithdrawals() {
+        return numberOfWithdrawals;
+    }
+
+    public void setNumberOfWithdrawals(int numberOfWithdrawals) {
+        this.numberOfWithdrawals = numberOfWithdrawals;
+    }
+
+    public float getAnnualInterestRate() {
+        return annualInterestRate;
+    }
+
+    public void setAnnualInterestRate(float annualInterestRate) {
+        this.annualInterestRate = annualInterestRate;
+    }
+
+    public float getMonthlyServiceCharge() {
+        return monthlyServiceCharge;
+    }
+
+    public void setMonthlyServiceCharge(float monthlyServiceCharge) {
+        this.monthlyServiceCharge = monthlyServiceCharge;
     }
 
     public void print() {
