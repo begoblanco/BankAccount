@@ -46,3 +46,7 @@ Consignar: invoca al método heredado. Si hay sobregiro, la cantidad consignada 
 Extracto mensual: invoca al método heredado.
 
 Un nuevo método imprimir que retorna el saldo de la cuenta, la comisión mensual, el número de transacciones realizadas (suma de cantidad de consignaciones y retiros) y el valor de sobregiro.
+
+## Uml Diagram 
+
+![bank drawio](https://github.com/user-attachments/assets/01661b44-d731-4503-9f57-b3863af78724)
