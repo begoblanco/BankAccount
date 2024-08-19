@@ -41,9 +41,15 @@ public class AccountTest {
     }
 
     @Test
-    public void testMonthlyProcess() {
+    public void testMonthlyStatement() {
         account.setMonthlyServiceCharge(100); 
         account.monthlyProcess();
         assertEquals(9941.25, account.getBalance(), 0.01); 
+    }
+
+    @Test
+    public void testPrint() {
+
+        assertDoesNotThrow(() -> account.print());
     }
 }
