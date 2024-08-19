@@ -10,11 +10,7 @@ public class SavingsAccount extends Account {
 
     @Override
     public void deposit(float amount) {
-        if (this.isActive) {
-            super.deposit(amount);
-        } else {
-            System.out.println("Account is inactive. Cannot deposit.");
-        }
+        super.deposit(amount); 
         this.checkStatus();
     }
 
@@ -41,9 +37,19 @@ public class SavingsAccount extends Account {
         this.isActive = this.balance >= 10000;
     }
 
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean isActive) {
+        this.isActive = isActive;
+    }
+    
     @Override
     public void print() {
         super.print();
         System.out.println("Account active: " + this.isActive);
     }
+
+    
 }

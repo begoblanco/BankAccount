@@ -32,10 +32,20 @@ public class CheckingAccount extends Account{
         }
         super.deposit(amount);
     }
+    
+    public float getOverdraft() {
+        return overdraft;
+    }
+
+    public void setOverdraft(float overdraft) {
+        this.overdraft = overdraft;
+    }
 
     @Override
     public void print() {
         super.print();
         System.out.println("Overdraft: " + this.overdraft);
     }
+
+  
 }
